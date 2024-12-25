@@ -3,9 +3,6 @@ import user.Roles;
 import user.User;
 
 import java.util.Scanner;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
     public static void main(String[] args) {
@@ -46,7 +43,10 @@ public class Main {
                         System.out.println(user2);
                     break;
                 case  3:
-
+                    System.out.println("Enter ID");
+                    int gid=sc.nextInt();
+                    User user3=direction.getUserId(gid);
+                    System.out.println(user3);
                     break;
                 case  4:
                     System.out.println("Enter id");
@@ -74,7 +74,7 @@ public class Main {
                     System.out.println("Entrez l'ID du user :");
                     int id1= sc.nextInt();
 
-                    System.out.println("suppeimer avec sucee");
+                    direction.removeUser(id1);
 
                     break;
 

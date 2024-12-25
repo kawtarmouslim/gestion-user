@@ -12,7 +12,7 @@ public class Direction {
     public List<User> getUsers(){
         return users;
     }
-    public User getUserId(int id,User user) {
+    public User getUserId(int id) {
         for (User u: users){
             if (u.getId()==(id)){
                 return u;
@@ -30,17 +30,19 @@ public class Direction {
                 u.setPhone(user.getPhone());
                 u.setPassword(user.getPassword());
                 u.setRle(user.getRle());
-
-
-
             }
         }
         return user;
     }
 
     public void removeUser(int id){
-
-               users.remove(id);
+        for (User ur:users){
+            if (ur.getId()==id){
+                users.remove(ur);
+                System.out.println("remove");
+        }
+             else System.out.println("not remove");
+             }
             }
 
 
