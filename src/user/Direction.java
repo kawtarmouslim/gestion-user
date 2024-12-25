@@ -21,10 +21,26 @@ public class Direction {
         System.out.println("cette id introuvable");
         return users.get(id);
     }
+    public User updateUser(int id ,User user){
+        for (User u:users){
+            if (u.getId()==id){
+                u.setName(user.getName());
+                u.setCity(user.getCity());
+                u.setMail(user.getMail());
+                u.setPhone(user.getPhone());
+                u.setPassword(user.getPassword());
+                u.setRle(user.getRle());
+
+
+
+            }
+        }
+        return user;
+    }
+
     public void removeUser(int id){
 
-                users.remove(id);
-
+               users.remove(id);
             }
 
 

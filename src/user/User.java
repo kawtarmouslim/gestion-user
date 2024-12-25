@@ -8,6 +8,7 @@ public class User extends Persone{
         this.role = role;
     }
 
+
     public Roles getRle() {
         return role;
     }

@@ -20,13 +20,11 @@ public class Persone {
         this.password = password;
     }
 
-    public static int getCounter() {
-        return counter;
+    public Persone() {
+
     }
 
-    public static void setCounter(int counter) {
-        Persone.counter = counter;
-    }
+
 
     public void setId(int id) {
         this.id = id;

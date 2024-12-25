@@ -15,8 +15,8 @@ public class Main {
             System.out.println("1-Add User ");
             System.out.println("2-Get User ");
             System.out.println("3-Get Par User par id ");
-            System.out.println("4-Remover User ");
             System.out.println("-5_Update User ");
+            System.out.println("4-Remover User ");
             System.out.println("Enter your choice");
             int choice=sc.nextInt();
             sc.nextLine();
@@ -49,13 +49,35 @@ public class Main {
 
                     break;
                 case  4:
-                    System.out.println("Enter Id :");
+                    System.out.println("Enter id");
                     int id=sc.nextInt();
-                    direction.removeUser(id);
+                    sc.nextLine();
+                    System.out.println("Enter username :");
+                    String username2=sc.nextLine();
+                    System.out.println("Enter city :");
+                    String city2=sc.nextLine();
 
-                     break;
-                case 5:
+                    System.out.println("Enter mail :");
+                    String mail2=sc.nextLine();
+
+                    System.out.println("Enter phone number :");
+                    String phone2=sc.nextLine();
+                    System.out.println("Enter password :");
+                    String password2=sc.nextLine();
+                    System.out.println("Enter Role (employé, administrateur, cliente):");
+                    String inputRole2 = sc.nextLine().toLowerCase();
+                    Roles role2= Roles.valueOf(inputRole2);
+                    User user2 = new User(username2, city2, mail2, phone2, password2, role2);
+                    direction.updateUser(id,user2);
                     break;
+                case 5:
+                    System.out.println("Entrez l'ID du user :");
+                    int id1= sc.nextInt();
+
+                    System.out.println("suppeimer avec sucee");
+
+                    break;
+
                 default:
                     System.out.println("Invalid choice");
             }
